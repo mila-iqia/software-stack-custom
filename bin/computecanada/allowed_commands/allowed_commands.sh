@@ -70,7 +70,7 @@ case "$SSH_ORIGINAL_COMMAND" in
 		fi
 	;;
 	# slurm commands
-	squeue*|scancel*|sbatch*|scontrol*|sq*)
+	diskusage_report*|/opt/software/slurm/bin/sinfo*|/opt/software/slurm/bin/sacct*|/opt/software/slurm/bin/squeue*|/opt/software/slurm/bin/scancel*|/opt/software/slurm/bin/sbatch*|/opt/software/slurm/bin/scontrol*|/opt/software/slurm/bin/sq*)
 		if [[ "$THIS_SCRIPT" == "allowed_commands.sh" || "$THIS_SCRIPT" == "slurm_commands.sh" ]]; then
 			$SSH_ORIGINAL_COMMAND
 		else
